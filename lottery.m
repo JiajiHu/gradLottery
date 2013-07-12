@@ -16,11 +16,9 @@ end
 
 order=randperm(participant_number);
 
-winner=zeros(ticket_number,1);
-
 fprintf(fid,'\r\nWinners:\r\n\r\n');
 disp(sprintf('Winners: \n'));
-for i=1:6;
+for i=1:ticket_number;
     fprintf(fid,'%d %s\r\n',stuNum(order(i)),name{order(i)});
     disp(sprintf('%d %s',stuNum(order(i)),name{order(i)}));
 end
